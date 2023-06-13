@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <link rel="stylesheet" href="stylo.css">
     <title>Login</title>
 </head>
-
 <body>
     <h2>Login</h2>
     <form method="post" action="login.php">
-        <label for="username">Nome de usuário:</label>
+        <label for="username">Nome de usuário:<span class="required">*</span></label>
         <input type="text" name="username" id="username" required><br><br>
         <label for="password">Senha:</label>
         <input type="password" name="password" id="password" required><br><br>
