@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="Pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,10 @@
     <link rel="stylesheet" href="stylo.css">
     <title>Login</title>
 </head>
+
 <body>
+    <div class="teste">
+        <div class="containner">
     <h2>Login</h2>
     <form method="post" action="login.php">
         <label for="username">Nome de usuário:<span class="required">*</span></label>
@@ -17,6 +21,7 @@
         <input type="password" name="password" id="password" required><br><br>
         <input class="btn btn-primary" type="submit" value="Entrar">
     </form>
+    </div>
 </body>
 
 </html>
@@ -26,9 +31,7 @@ session_start();
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];
     $password = md5($_POST['password']);
-
     $usuarios = json_decode(file_get_contents('usuarios.json'), true);
-
     $autenticado = false;
 
     foreach ($usuarios as $usuario) {
@@ -37,13 +40,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             break;
         }
     }
-
     if ($autenticado) {
         $_SESSION['username'] = $username;
         header("Location: https://github.com/MarcusViny");
         exit();
     } else {
-        // Se chegou até aqui, significa que as credenciais são inválidas
         echo "Nome de usuário ou senha inválidos.";
     }
 }
