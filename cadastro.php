@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="Pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,7 +17,7 @@
         <input type="password" name="password" id="password" required><br><br>
         <label for="confirm_password">Confirme a senha:<span class="required">*</span></label>
         <input type="password" name="confirm_password" id="confirm_password" required><br><br>
-        <input type="submit" value="Cadastrar">
+        <input class="btn btn-primary" type="submit" value="Cadastrar">
 
 </body>
 <?php
